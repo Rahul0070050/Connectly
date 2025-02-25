@@ -87,6 +87,63 @@ const LeftSidebar = () => {
             </div>
             <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
           </div>
+          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
+            <Image
+              className="rounded-full"
+              width={55}
+              height={55}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-base">About me</p>
+            </div>
+            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
+          </div>
+          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
+            <Image
+              className="rounded-full"
+              width={55}
+              height={55}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-base">About me</p>
+            </div>
+            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
+          </div>
+
+          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
+            <Image
+              className="rounded-full"
+              width={55}
+              height={55}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-base">About me</p>
+            </div>
+            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
+          </div>
+          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
+            <Image
+              className="rounded-full"
+              width={55}
+              height={55}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-base">About me</p>
+            </div>
+            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
+          </div>
         </div>
       </div>
     </div>

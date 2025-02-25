@@ -1,3 +1,4 @@
+"use client";
 import { MessageSquareMore, Plus, Search } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -8,8 +9,8 @@ const sampleProfileURI =
 
 const RightSidebar = () => {
   return (
-    <div className="flex flex-col p-5 bg-white min-h-screen">
-      <div className="flex items-center gap-2 rounded-md px-4 py-1 bg-gray-100">
+    <div className="flex flex-col p-5 bg-white h-full">
+      <div className="flex items-center gap-2 rounded-md px-4 py-1 bg-gray-100 sticky top-0">
         <Search className="text-slate-400" />
         <input
           className="p-1 text-lg outline-none text-slate-700 bg-gray-100"
@@ -44,9 +45,149 @@ const RightSidebar = () => {
           <h5 className="font-semibold">Rahul</h5>
         </div>
       </div>
-      <div className="">
-        <SubHeading style="mt-3 mb-4" heading={"Resent Chat"} />
-        <div className="text-black flex flex-col gap-2">
+      <SubHeading style="mt-3 mb-4" heading={"Resent Chat"} />
+      <div className="overflow-scroll scrollbar-hide">
+        <div className={`text-black flex flex-col gap-2`}>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
+          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+            <Image
+              className="rounded-full"
+              width={60}
+              height={60}
+              src={sampleProfileURI}
+              alt="sample-profile"
+            />
+            <div>
+              <h3 className="font-semibold text-lg">Rahul OR</h3>
+              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+            </div>
+            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+          </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"

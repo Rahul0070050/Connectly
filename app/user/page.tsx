@@ -1,6 +1,7 @@
 import React from "react";
 import CreatePost from "../_components/CreatePost/CreatePost";
 import FriendSuggestion from "../_components/FriendSuggestion/FriendSuggestion";
+import GroupSuggestion from "../_components/GroupSuggestion/GropuSuggestion";
 
 const User = () => {
   return (
@@ -8,8 +9,11 @@ const User = () => {
       <div className="col-span-8 min-h-screen">
         <CreatePost />
       </div>
-      <div className="col-span-4 min-h-screen">
-        <FriendSuggestion />
+      <div className="col-span-4 h-fit sticky top-9">
+        <div className="grid grid-cols-1 gap-9">
+          <FriendSuggestion />
+          <GroupSuggestion />
+        </div>
       </div>
     </section>
   );
