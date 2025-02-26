@@ -9,7 +9,7 @@ const sampleProfileURI =
 
 const RightSidebar = () => {
   return (
-    <div className="flex flex-col p-5 bg-white h-full">
+    <div className="flex flex-col p-5 bg-white h-screen">
       <div className="flex items-center gap-2 rounded-md px-4 py-1 bg-gray-100 sticky top-0">
         <Search className="text-slate-400" />
         <input

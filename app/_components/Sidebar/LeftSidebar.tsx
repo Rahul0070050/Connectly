@@ -17,7 +17,7 @@ const sampleProfileURI =
 
 const LeftSidebar = () => {
   return (
-    <div className="flex flex-col p-7 bg-white min-h-screen gap-7">
+    <div className="flex flex-col p-7 bg-white h-screen gap-7">
       <h1 className="font-bold text-3xl mb-5">Connectly</h1>
       <ul className="flex flex-col gap-6">
         <li className="flex items-center gap-3 font-semibold text-base cursor-pointer text-rose-400 hover:text-rose-300 rounded-md">
@@ -42,8 +42,8 @@ const LeftSidebar = () => {
           <Settings className="w-5" /> Settings
         </li>
       </ul>
-      <div className="mt-5">
-        <SubHeading style="mt-3 mb-4" heading={"My Contact"} />
+      <SubHeading style="my-4" heading={"My Contact"} />
+      <div className="overflow-scroll scrollbar-hide">
         <div className="flex flex-col justify-center gap-2">
           <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
             <Image

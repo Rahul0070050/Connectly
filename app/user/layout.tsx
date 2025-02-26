@@ -11,7 +11,7 @@ export default function UserLayout({
   return (
     <section className="relative grid grid-cols-12 bg-background h-screen">
       {/* Left Sidebar - Stays Fixed */}
-      <div className="col-span-2 sticky top-0 h-screen">
+      <div className="col-span-2 sticky top-0 h-screen overflow-hidden">
         <LeftSidebar />
       </div>
 
