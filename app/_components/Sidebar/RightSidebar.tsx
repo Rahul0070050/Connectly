@@ -3,13 +3,11 @@ import { MessageSquareMore, Plus, Search } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import SubHeading from "../SubHeading/SubHeading";
-
-const sampleProfileURI =
-  "data:image/jpeg;base64,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";
+import { sampleProfileURI } from "@/data/profile";
 
 const RightSidebar = () => {
   return (
-    <div className="flex flex-col p-5 bg-white h-screen">
+    <div className="flex flex-col p-5 bg-white h-[calc(100vh-78px)]">
       <div className="flex items-center gap-2 rounded-md px-4 py-1 bg-gray-100 sticky top-0">
         <Search className="text-slate-400" />
         <input
@@ -42,7 +40,7 @@ const RightSidebar = () => {
             src={sampleProfileURI}
             alt="sample-profile"
           />
-          <h5 className="font-semibold">Rahul</h5>
+          <h5 className="font-semibold">Aisha...</h5>
         </div>
       </div>
       <SubHeading style="mt-3 mb-4" heading={"Resent Chat"} />
@@ -51,170 +49,172 @@ const RightSidebar = () => {
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-1"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Aisha Khan</h3>
+              <p className="text-slate-500 text-lg">Just finished...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-2"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Carlos Silva</h3>
+              <p className="text-slate-500 text-lg">Design mockups...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-3"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Elena Petrova</h3>
+              <p className="text-slate-500 text-lg">
+                Meeting rescheduled to...
+              </p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-4"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">David Lee</h3>
+              <p className="text-slate-500 text-lg">Let's discuss...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-5"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Sophie Dubois</h3>
+              <p className="text-slate-500 text-lg">Quick feedback on...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-6"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Kenji Tanaka</h3>
+              <p className="text-slate-500 text-lg">Data analysis...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-7"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Maria Garcia</h3>
+              <p className="text-slate-500 text-lg">Project update in...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-8"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Omar Hassan</h3>
+              <p className="text-slate-500 text-lg">Need your approval...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-9"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Li Wei</h3>
+              <p className="text-slate-500 text-lg">Confirming the...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-10"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Isabella Rossi</h3>
+              <p className="text-slate-500 text-lg">Sent you the...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-11"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Noah Smith</h3>
+              <p className="text-slate-500 text-lg">Checking in on...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"
-              width={60}
-              height={60}
+              width={56}
+              height={56}
               src={sampleProfileURI}
-              alt="sample-profile"
+              alt="profile-12"
             />
             <div>
-              <h3 className="font-semibold text-lg">Rahul OR</h3>
-              <p className="text-slate-500 text-lg">Hey, Where are You?</p>
+              <h3 className="font-semibold text-lg">Sofia Gomez</h3>
+              <p className="text-slate-500 text-lg">Reminder: Team...</p>
             </div>
-            <MessageSquareMore className="ml-auto w-9 h-9 text-blue-400/90" />
+            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
           </div>
         </div>
       </div>

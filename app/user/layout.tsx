@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import LeftSidebar from "../_components/Sidebar/LeftSidebar";
 import Navbar from "../_components/header/Navbar";
 import RightSidebar from "../_components/Sidebar/RightSidebar";
