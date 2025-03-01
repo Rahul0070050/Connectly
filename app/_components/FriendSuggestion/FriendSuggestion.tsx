@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { sampleProfileURI } from "@/data/profile";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,12 +33,12 @@ const FriendSuggestion = () => {
         </div>
       </div>
       <div className="flex gap-6">
-        <button className="text-lg px-5 py-2 w-full rounded-md border-2 text-white bg-pink-500">
+        <Button className="text-lg px-5 py-6 w-full rounded-lg border-2 hover:bg-transparent hover:text-pink-500 hover:border-pink-400 text-white bg-pink-500">
           Follow
-        </button>
-        <button className="text-lg px-5 py-2 w-full rounded-md border-2 border-gray-400">
+        </Button>
+        <Button className="text-lg px-5 py-6 w-full rounded-lg border-2 border-gray-400">
           Ignore
-        </button>
+        </Button>
       </div>
     </div>
   );

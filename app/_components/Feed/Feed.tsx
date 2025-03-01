@@ -2,7 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import React from "../../../public/feed/temple.jpg";
 import { useEffect, useState } from "react";
-import { Forward, Heart, MessageSquare, Share } from "lucide-react";
+import { Forward, Heart, MessageSquare } from "lucide-react";
 
 type PROPS = {
   feed: {

@@ -6,7 +6,7 @@ import Feeds from "../_components/Feed/Feeds";
 
 const User = () => {
   return (
-    <section className="grid grid-cols-12 gap-9 p-9">
+    <section className="grid grid-cols-12 gap-9 p-9 relative bg-gray-100">
       <div className="col-span-8 min-h-screen">
         <CreatePost />
         <Feeds />

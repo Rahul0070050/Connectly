@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { sampleProfileURI } from "@/data/profile";
 import { ImageIcon, Smile, Video } from "lucide-react";
 import Image from "next/image";
@@ -35,9 +36,9 @@ const CreateFeed = () => {
           <Smile className="w-7 h-7 group-hover:text-pink-400" />
           <h4 className="group-hover:text-pink-400">Fealing</h4>
         </div>
-        <button className="bg-pink-500 hover:bg-transparent hover:text-pink-400 border transition-all hover:border-pink-400 px-10 py-2 text-white rounded-md cursor-pointer">
+        <Button className="bg-pink-500 hover:bg-transparent hover:text-pink-400 border transition-all hover:border-pink-400 px-10 py-2 text-white rounded-md cursor-pointer">
           Post
-        </button>
+        </Button>
       </div>
     </div>
   );
