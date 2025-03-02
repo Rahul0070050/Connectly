@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-5 bg-white sticky top-0 h-24">
+    <nav className="flex justify-between items-center p-5 bg-white sticky top-0 h-[78px]">
       <div className="flex items-center gap-4 rounded-md border border-slate-400 px-2">
         <Search className="text-slate-400" />
         <input

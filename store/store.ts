@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { feedSlice } from "./feedSlice";
+import { userSlice } from "./userSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       feed: feedSlice.reducer,
+      user: userSlice.reducer,
     },
   });
 };

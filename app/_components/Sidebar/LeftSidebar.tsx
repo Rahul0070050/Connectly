@@ -11,15 +11,18 @@ import React from "react";
 import SubHeading from "../SubHeading/SubHeading";
 import Image from "next/image";
 import { sampleProfileURI } from "@/data/profile";
+import Link from "next/link";
 
 const LeftSidebar = () => {
   return (
     <div className="flex flex-col p-7 bg-white h-screen gap-7">
       <h1 className="font-bold text-3xl mb-5">Connectly</h1>
       <ul className="flex flex-col gap-6">
-        <li className="flex items-center gap-3 font-semibold text-base cursor-pointer text-rose-400 hover:text-rose-300 rounded-md">
-          <House className="w-5" /> Feed
-        </li>
+        <Link href={"/user/feed"}>
+          <li className="flex items-center gap-3 font-semibold text-base cursor-pointer text-rose-400 hover:text-rose-300 rounded-md">
+            <House className="w-5" /> Feed
+          </li>
+        </Link>
         <li className="flex items-center gap-3 font-semibold text-base cursor-pointer hover:text-rose-300 rounded-md">
           <LayoutGrid className="w-5" /> Explore
         </li>

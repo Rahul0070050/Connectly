@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import SubHeading from "../SubHeading/SubHeading";
 import { sampleProfileURI } from "@/data/profile";
+import Link from "next/link";
 
 const RightSidebar = () => {
   return (
@@ -46,20 +47,22 @@ const RightSidebar = () => {
       <SubHeading style="mt-3 mb-4" heading={"Resent Chat"} />
       <div className="overflow-scroll scrollbar-hide">
         <div className={`text-black flex flex-col gap-2`}>
-          <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
-            <Image
-              className="rounded-full"
-              width={56}
-              height={56}
-              src={sampleProfileURI}
-              alt="profile-1"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Aisha Khan</h3>
-              <p className="text-slate-500 text-lg">Just finished...</p>
+          <Link href={"/user/chat"}>
+            <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
+              <Image
+                className="rounded-full"
+                width={56}
+                height={56}
+                src={sampleProfileURI}
+                alt="profile-1"
+              />
+              <div>
+                <h3 className="font-semibold text-lg">Aisha Khan</h3>
+                <p className="text-slate-500 text-lg">Just finished...</p>
+              </div>
+              <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
             </div>
-            <MessageSquareMore className="ml-auto w-7 h-7 text-blue-400/90" />
-          </div>
+          </Link>
           <div className="flex items-center gap-5 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
             <Image
               className="rounded-full"

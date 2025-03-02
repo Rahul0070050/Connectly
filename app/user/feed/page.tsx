@@ -1,8 +1,8 @@
 import React from "react";
-import CreatePost from "../_components/CreatePost/CreateFeed";
-import FriendSuggestion from "../_components/FriendSuggestion/FriendSuggestion";
-import GroupSuggestion from "../_components/GroupSuggestion/GropuSuggestion";
-import Feeds from "../_components/Feed/Feeds";
+import CreatePost from "../../_components/CreatePost/CreateFeed";
+import FriendSuggestion from "../../_components/FriendSuggestion/FriendSuggestion";
+import GroupSuggestion from "../../_components/GroupSuggestion/GropuSuggestion";
+import Feeds from "../../_components/Feed/Feeds";
 
 const User = () => {
   return (
