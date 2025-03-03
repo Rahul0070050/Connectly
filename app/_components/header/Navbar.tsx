@@ -1,6 +1,7 @@
 import { sampleProfileURI } from "@/data/profile";
 import { Search, Sun } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -18,17 +19,18 @@ const Navbar = () => {
         <div>
           <Sun />
         </div>
-        <div className="flex items-center gap-4">
-          <h1 className="text-2xl font-bold">Rahul OR</h1>
-          <Image
-            className="rounded-full"
-            width={40}
-            height={40}
-            src={sampleProfileURI}
-            alt="Profile"
-          />
-          {/* image */}
-        </div>
+        <Link href={"/user/settings/my-profile"}>
+          <div className="flex items-center gap-4">
+            <h1 className="text-2xl font-bold">Rahul OR</h1>
+            <Image
+              className="rounded-full"
+              width={40}
+              height={40}
+              src={sampleProfileURI}
+              alt="Profile"
+            />
+          </div>
+        </Link>
       </div>
     </nav>
   );

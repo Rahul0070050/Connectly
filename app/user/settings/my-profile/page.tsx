@@ -5,7 +5,7 @@ import React from "react";
 import ProfileUserCard from "@/app/_components/ProfileUserCard/ProfileUserCard";
 import SettingsTopBar from "@/app/_components/SettingsTopBar/SettingsTopBar";
 import UserProfileData from "@/app/_components/UserProfileData/UserProfileData";
-import PasswordSettings from "@/app/_components/PasswordSettings/PasswordSettings";
+// import PasswordSettings from "@/app/_components/PasswordSettings/PasswordSettings";
 
 const page = () => {
   return (

@@ -21,22 +21,22 @@ const ProfileUserCard = () => {
         <p>Developer</p>
       </div>
       <div className="flex flex-col items-center gap-1">
-        <span className="flex font-semibold p-2 w-full justify-center">
+        <span className="flex font-semibold p-1 w-full justify-center">
           rahulor2000@gmail.com
         </span>
-        <span className="flex font-semibold p-2 w-full justify-center">
+        <span className="flex font-semibold p-1 w-full justify-center">
           56587686786
         </span>
-        <span className="flex font-semibold p-2 w-full justify-center items-center gap-2 hover:text-rose-400 cursor-pointer">
-          <Linkedin className="w-5 h-5" />
+        <span className="flex font-semibold p-1 w-full justify-center items-center gap-1 hover:text-rose-400 cursor-pointer">
+          <Linkedin className="w-4 h-4" />
           rahul-or
         </span>
-        <span className="flex font-semibold p-2 w-full justify-center items-center gap-2 hover:text-rose-400 cursor-pointer">
-          <Instagram className="w-5 h-5" />
+        <span className="flex font-semibold p-1 w-full justify-center items-center gap-1 hover:text-rose-400 cursor-pointer">
+          <Instagram className="w-4 h-4" />
           imrahulor
         </span>
-        <span className="flex font-semibold p-2 w-full justify-center items-center gap-2 hover:text-rose-400 cursor-pointer">
-          <Facebook className="w-5 h-5" />
+        <span className="flex font-semibold p-1 w-full justify-center items-center gap-1 hover:text-rose-400 cursor-pointer">
+          <Facebook className="w-4 h-4" />
           Rahul OR
         </span>
       </div>

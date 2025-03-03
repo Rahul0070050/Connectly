@@ -38,11 +38,11 @@ const LeftSidebar = () => {
         <li className="flex items-center gap-3 font-semibold text-base cursor-pointer hover:text-rose-300 rounded-md">
           <Send className="w-5" /> Messages
         </li>
-        <Link href={"/user/settings/my-profile"}>
+        {/* <Link href={"/user/settings/my-profile"}>
           <li className="flex items-center gap-3 font-semibold text-base cursor-pointer hover:text-rose-300 rounded-md">
             <Settings className="w-5" /> Settings
           </li>
-        </Link>
+        </Link> */}
       </ul>
       <SubHeading style="mt-4 mb-1" heading={"My Contact"} />
       <div className="overflow-scroll scrollbar-hide">
