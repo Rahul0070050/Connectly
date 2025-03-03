@@ -24,10 +24,10 @@ const page = () => {
         </div>
       </div>
       <div className="grid grid-cols-12 bg-gray-100 gap-9 px-9">
-        <div className="col-span-4 -translate-y-24">
+        <div className="col-span-4 -translate-y-24 bg-white rounded-md">
           <ProfileUserCard />
         </div>
-        <div className="col-span-8 -translate-y-24 p-5 bg-white">
+        <div className="col-span-8 -translate-y-24 p-5 bg-white rounded-md">
           <SettingsTopBar title="User Details" />
           <UserProfileData />
           {/* <SettingsTopBar title="Security & Login" /> */}

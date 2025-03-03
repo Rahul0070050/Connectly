@@ -5,7 +5,7 @@ import React from "react";
 
 const ProfileUserCard = () => {
   return (
-    <div className="flex flex-col gap-6 items-center py-8 bg-white rounded-md">
+    <div className="flex flex-col gap-6 items-center py-8">
       <div className="flex flex-col items-center">
         <div className="relative">
           <Image

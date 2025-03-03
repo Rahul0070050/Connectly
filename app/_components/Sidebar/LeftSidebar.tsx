@@ -50,98 +50,14 @@ const LeftSidebar = () => {
           <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
             <Image
               className="rounded-full"
-              width={55}
-              height={55}
+              width={50}
+              height={50}
               src={sampleProfileURI}
               alt="profile-1"
             />
             <div>
               <h3 className="font-semibold text-lg">Aisha Khan</h3>
-              <p className="text-slate-500 text-base">Software Developer</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-2"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Carlos Silva</h3>
-              <p className="text-slate-500 text-base">Graphic Designer</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-3"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Elena Petrova</h3>
-              <p className="text-slate-500 text-base">Marketing Manager</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-4"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">David Lee</h3>
-              <p className="text-slate-500 text-base">Product Manager</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-5"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Sophie Dubois</h3>
-              <p className="text-slate-500 text-base">UX Designer</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-6"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Kenji Tanaka</h3>
-              <p className="text-slate-500 text-base">Data Scientist</p>
-            </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
-          </div>
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={55}
-              height={55}
-              src={sampleProfileURI}
-              alt="profile-7"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Maria Garcia</h3>
-              <p className="text-slate-500 text-base">Project Lead</p>
+              <p className="text-slate-500 text-base">Web Developer</p>
             </div>
             <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
           </div>
