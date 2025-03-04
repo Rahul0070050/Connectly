@@ -1,13 +1,15 @@
-import { Camera } from "lucide-react";
-import banner from "../../../../public/banner.jpg";
 import Image from "next/image";
+import banner from "../../../public/banner.jpg";
 import React from "react";
+import { Camera } from "lucide-react";
 import ProfileUserCard from "@/app/_components/ProfileUserCard/ProfileUserCard";
 import SettingsTopBar from "@/app/_components/SettingsTopBar/SettingsTopBar";
 import UserProfileData from "@/app/_components/UserProfileData/UserProfileData";
-// import PasswordSettings from "@/app/_components/PasswordSettings/PasswordSettings";
+import FeedCard from "@/app/_components/FeedCard/FeedCard";
+import { feeds } from "@/data/feed";
 
-const page = () => {
+const page = async ({ params }: { params: Promise<{ userid: string }> }) => {
+  const userid = Number((await params).userid);
   return (
     <div>
       <div className="relative">
@@ -24,14 +26,19 @@ const page = () => {
         </div>
       </div>
       <div className="grid grid-cols-12 bg-gray-100 gap-9 px-9">
-        <div className="col-span-4 -translate-y-24 bg-white rounded-md">
-          <ProfileUserCard />
+        <div className="col-span-4 bg-white rounded-md -translate-y-28">
+          <ProfileUserCard userId={userid} />
         </div>
-        <div className="col-span-8 -translate-y-24 p-5 bg-white rounded-md">
+        <div className="col-span-8 p-5 bg-white rounded-md -translate-y-28">
           <SettingsTopBar title="User Details" />
-          <UserProfileData />
+          <UserProfileData userId={userid} />
           {/* <SettingsTopBar title="Security & Login" /> */}
           {/* <PasswordSettings /> */}
+        </div>
+        <div className="col-span-12 p-5 bg-white rounded-md -translate-y-28">
+          {feeds.map((feed) => (
+            <FeedCard feed={feed} />
+          ))}
         </div>
       </div>
     </div>

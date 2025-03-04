@@ -18,7 +18,7 @@ const ChatMessage = ({ chat }: PROPS) => {
     <div
       className={`p-2 px-4 w-fit max-w-[500px]  rounded-2xl ${
         id === chat.senderId
-          ? "ml-auto text-right text-white rounded-tr-none bg-pink-500"
+          ? "ml-auto text-right text-white rounded-tr-none bg-slate-400"
           : "text-left rounded-tl-none bg-[#e4e8f7]"
       }
       ${chat.message.length < 30 ? "flex items-center gap-3" : ""}`}

@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Edit } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const UserProfileData = () => {
+const UserProfileData = ({ userId }: { userId?: number }) => {
   return (
     <div className="p-3 grid grid-cols-2">
       <div className="grid-cols-1 mb-2">
@@ -35,14 +34,18 @@ const UserProfileData = () => {
         <h5 className="text-slate-400 font-medium mb-1">Gender</h5>
         <span className="text-xl">Male</span>
       </div>
-      <div className="grid-cols-1 py-3">
-        <Button className="ml-0 bg-blue-400">
-          <Edit /> Edit
-        </Button>
-      </div>
-      <div className="grid-cols-1 text-blue-500">
-        <Link href={""}>Change Password</Link>
-      </div>
+      {!userId && (
+        <>
+          <div className="grid-cols-1 py-3">
+            <Button className="ml-0 bg-pink-500">
+              <Edit /> Edit
+            </Button>
+          </div>
+          <div className="grid-cols-1 text-blue-500">
+            <Link href={""}>Change Password</Link>
+          </div>
+        </>
+      )}
     </div>
   );
 };

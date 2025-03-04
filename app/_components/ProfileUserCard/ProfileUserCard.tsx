@@ -1,11 +1,20 @@
 import { sampleProfileURI } from "@/data/profile";
-import { Camera, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  Camera,
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageSquareMore,
+  Phone,
+  Video,
+} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const ProfileUserCard = () => {
+const ProfileUserCard = ({ userId }: { userId?: number }) => {
   return (
-    <div className="flex flex-col gap-6 items-center py-8">
+    <div className="flex flex-col gap-4 items-center py-8">
       <div className="flex flex-col items-center">
         <div className="relative">
           <Image
@@ -19,7 +28,27 @@ const ProfileUserCard = () => {
         </div>
         <h3 className="mt-2 font-bold text-lg">Rahul O R</h3>
         <p>Developer</p>
+        {userId && (
+          <span className="p-2 px-4 mt-1  border border-green-400 rounded-full">
+            online
+          </span>
+        )}
       </div>
+      {userId && (
+        <div className="flex gap-5">
+          <span className="p-2 rounded-full border-2 text-green-400 border-green-400 cursor-pointer hover:bg-green-400 hover:text-white transition-all">
+            <Phone className="w-6 h-6" />
+          </span>
+          <span className="p-2 rounded-full border-2 text-rose-400 border-rose-400 cursor-pointer hover:bg-rose-400 hover:text-white transition-all">
+            <Video className="w-6 h-6" />
+          </span>
+          <span className="p-2 rounded-full border-2 text-blue-400 border-blue-400 cursor-pointer hover:bg-blue-400 hover:text-white transition-all">
+            <Link href={"/user/chat"}>
+              <MessageSquareMore className="w-6 h-6" />
+            </Link>
+          </span>
+        </div>
+      )}
       <div className="flex flex-col items-center gap-1">
         <span className="flex font-semibold p-1 w-full justify-center">
           rahulor2000@gmail.com

@@ -19,7 +19,7 @@ const Navbar = () => {
         <div>
           <Sun />
         </div>
-        <Link href={"/user/settings/my-profile"}>
+        <Link href={"/user/profile"}>
           <div className="flex items-center gap-4">
             <h1 className="text-2xl font-bold">Rahul OR</h1>
             <Image

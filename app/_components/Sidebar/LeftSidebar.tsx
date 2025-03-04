@@ -1,19 +1,25 @@
+"use client";
 import {
   Bookmark,
   House,
   LayoutGrid,
+  MessageSquareMore,
+  Phone,
   Send,
   Settings,
   ShoppingBag,
   Users,
+  Video,
 } from "lucide-react";
 import React from "react";
 import SubHeading from "../SubHeading/SubHeading";
 import Image from "next/image";
 import { sampleProfileURI } from "@/data/profile";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const LeftSidebar = () => {
+  const navigate = useRouter();
   return (
     <div className="flex flex-col p-7 bg-white h-screen gap-7">
       <h1 className="font-bold text-3xl mb-5">Connectly</h1>
@@ -47,19 +53,38 @@ const LeftSidebar = () => {
       <SubHeading style="mt-4 mb-1" heading={"My Contact"} />
       <div className="overflow-scroll scrollbar-hide">
         <div className="flex flex-col justify-center gap-2">
-          <div className="flex gap-4 items-center hover:bg-gray-100 p-3 px-2 rounded cursor-pointer transition-all">
-            <Image
-              className="rounded-full"
-              width={50}
-              height={50}
-              src={sampleProfileURI}
-              alt="profile-1"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">Aisha Khan</h3>
-              <p className="text-slate-500 text-base">Web Developer</p>
+          <div className="flex gap-4 items-center p-3 rounded cursor-pointer transition-all relative hover:bg-gray-100">
+            <Link href={"/user/4"}>
+              <Image
+                className="rounded-full"
+                width={50}
+                height={50}
+                src={sampleProfileURI}
+                alt="profile-1"
+              />
+            </Link>
+            <Link href={"/user/4"}>
+              <div>
+                <h3 className="font-semibold text-lg">Aisha Khan</h3>
+                <p className="text-slate-500 text-base">Web Developer</p>
+              </div>
+            </Link>
+            <div className="p-1 w-full flex gap-1 absolute left-16 bottom-2 bg-gray-100">
+              <span className="p-1 rounded-full border-2 text-green-400 border-green-400 cursor-pointer hover:bg-green-400 hover:text-white transition-all">
+                <Phone className="w-3 h-3" />
+              </span>
+              <span className="p-1 rounded-full border-2 text-rose-400 border-rose-400 cursor-pointer hover:bg-rose-400 hover:text-white transition-all">
+                <Video className="w-3 h-3" />
+              </span>
+              <span
+                className="p-1 rounded-full border-2 text-blue-400 border-blue-400 cursor-pointer hover:bg-blue-400 hover:text-white transition-all"
+                onClick={() => {
+                  navigate.push("/user/chat");
+                }}
+              >
+                <MessageSquareMore className="w-3 h-3" />
+              </span>
             </div>
-            <div className="p-2 rounded hover:bg-gray-200/60 text-black ml-auto"></div>
           </div>
         </div>
       </div>
